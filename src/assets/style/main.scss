@@ -1,0 +1,101 @@
+@import url('./fonts.scss');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+button{
+  background: none;
+  border: none;
+}
+.container{
+  max-width: 775px;
+  width: 100%;
+  margin: 0 auto;
+}
+body{
+  background: #353638;
+
+}
+.main{ 
+  padding: 72px 50px;
+  &__box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 50px;
+  }
+}
+.stopwatch{
+  
+  width: 225px;
+  height: 120px;
+  background: #696969;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9E9E9E;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  &__time{
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    text-align: center;
+    color: #9E9E9E;
+    padding: 22px 0 20px 0;
+    border-bottom: 1px solid #9E9E9E;
+    &.active{
+      color: #FFF;
+      border-bottom: 1px solid #FFF;
+    }
+  }
+  &__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 20px 0;
+    &.active{
+      & button{
+        color: #FFF;
+      }
+      & img{
+        filter: brightness(100);
+      }
+    }
+    &-delete{
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      color: #9E9E9E;
+      font-size: 15px;
+    }
+  }
+  
+}
+
+@media (max-width: 874px) {
+  .main__box{
+    justify-content: space-evenly;
+  }
+  
+}
+@media (max-width: 600px) {
+  .main__box{
+    justify-content: center;
+    
+  }
+}
